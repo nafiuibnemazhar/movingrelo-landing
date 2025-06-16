@@ -23,7 +23,11 @@
     <header id="mainHeader">
       <div class="navbar">
         <div class="logo">
-          <img src="assets/img/movingrelo-logo.webp" alt="" />
+          <img src="assets/img/movingrelo-logo.webp" alt="Moving Relocation
+          Logo" class="img-fluid d-none d-sm-block" /* Default logo - hidden on
+          xs */ /> <img src="assets/img/movingrelo-logo.webp" alt="Moving
+          Relocation Logo" class="img-fluid d-sm-none" /* Mobile logo - only
+          shows on xs */ style="max-width: 120px;" /* Mobile-specific size */ />
         </div>
         <div class="menu">
           <ul class="menu-list">
@@ -31,19 +35,99 @@
             <li><a href="" class="menu-item-2">Why Our Method Works</a></li>
             <li><a href="" class="menu-item-3">Reach Out</a></li>
             <li>
-              <a href="tel:888-577-5678" class="menu-item-4"
-                ><i class="fa-solid fa-phone"></i> 888-577-5678</a
-              >
+              <a href="tel:888-577-5678" class="menu-item-4">
+                <i class="fa-solid fa-phone"></i>
+                <span class="d-none d-md-inline ms-2">888-577-5678</span>
+              </a>
             </li>
           </ul>
         </div>
       </div>
     </header>
-    <main></main>
 
-    <div style="height: 200vh; padding-top: 100px">
-      <!-- This pushes content below the fixed header -->
-    </div>
+    <main>
+      <section class="banner-burp">
+        <div class="banner-text">
+          <div class="banner-heading">
+            <h1>Looking to Grow Your Business?</h1>
+            <hr />
+            <h3>
+              Premium Moving Leads and Live Transfers Are Just One Click Away
+            </h3>
+          </div>
+          <div class="banner-cta">
+            <div class="phone">
+              <p class="fw-bold">Reach us today</p>
+              <a href="tel:888-577-5678" class="phone-banner">888-577-5678</a>
+            </div>
+            <div class="banner-btn">
+              <a href="#">Start now</a>
+            </div>
+          </div>
+          <hr />
+        </div>
+        <div class="banner-img">
+          <img src="assets/img/banner-mv-2.webp" alt="" />
+        </div>
+      </section>
+
+      <!-- Additional Content Sections -->
+      <section class="content-section bg-light">
+        <h2>Our Services</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card mb-4">
+              <div class="card-body">
+                <h3 class="card-title">Exclusive Leads</h3>
+                <p class="card-text">
+                  High-quality leads delivered exclusively to your business.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4">
+              <div class="card-body">
+                <h3 class="card-title">Live Transfers</h3>
+                <p class="card-text">
+                  Real-time connections with customers ready to move now.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4">
+              <div class="card-body">
+                <h3 class="card-title">Targeted Areas</h3>
+                <p class="card-text">
+                  Leads specifically for your service locations.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <h2>Why Choose Us</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <h3>Proven Results</h3>
+            <p>
+              Our clients see an average 35% increase in conversions compared to
+              other lead sources.
+            </p>
+          </div>
+          <div class="col-md-6">
+            <h3>Quality Guarantee</h3>
+            <p>
+              We verify every lead to ensure you're getting real customers ready
+              to move.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {
@@ -51,7 +135,7 @@
         let lastScroll = 0;
 
         window.addEventListener("scroll", function () {
-          if (!header) return; // Safety check
+          if (!header) return;
 
           const currentScroll = window.pageYOffset;
 

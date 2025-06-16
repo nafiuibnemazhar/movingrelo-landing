@@ -1,5 +1,7 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 header {
   position: fixed;
@@ -17,7 +19,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 5%;
   transition: all 0.3s ease;
 }
 .logo img {
@@ -53,6 +54,98 @@ header {
   font-size: 1.5rem;
   color: #ffffff;
 }
+/* Content Styles */
+main {
+  margin-top: 100px; /* Offset for fixed header */
+}
+
+.banner-burp {
+  min-height: 100vh;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 0 20px;
+}
+.banner-text {
+  background-color: rgb(149, 212, 253);
+  width: auto;
+  height: auto;
+  border-radius: 10px;
+}
+.banner-heading {
+  padding: 20px;
+}
+.banner-text h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.banner-text hr {
+  width: 100px;
+  margin: 20px auto;
+  border: 2px solid white;
+}
+
+.banner-text h3 {
+  display: inline-block;
+  width: 90%;
+  color: #222;
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+}
+.banner-img {
+  padding: 60px;
+}
+.banner-img img {
+  width: 100%;
+  border-radius: 10px;
+}
+.banner-cta {
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.phone-banner {
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: #078d03;
+  text-decoration: none;
+  border: 1px solid #078d03;
+  padding: 10px;
+}
+.phone-banner:hover {
+  color: #046109;
+  box-shadow: 1px 1px 6px -1px rgba(0, 0, 0, 0.5);
+}
+.banner-btn a {
+  margin-bottom: 20px;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-radius: 5px;
+  background-color: #078d03;
+  color: #ffffff;
+  border: 1px solid #fff;
+  padding: 10px;
+}
+/* Additional Content Sections */
+.content-section {
+  padding: 80px 5%;
+}
+
+.content-section h2 {
+  text-align: center;
+  margin-bottom: 50px;
+}
 /* Scrolled down state */
 header.scrolled {
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
@@ -74,16 +167,43 @@ header.scrolled .menu-list a {
   .menu-item-2 {
     display: none;
   }
+  .banner-burp {
+    flex-direction: column;
+  }
+  .banner-img {
+    padding: 0;
+  }
+  .banner-cta {
+    flex-direction: column;
+  }
 }
 @media (min-width: 576px) and (max-width: 991.98px) {
   .menu-item-1,
   .menu-item-2 {
     display: none;
   }
+  .banner-burp {
+    flex-direction: column;
+  }
+  .banner-img {
+    padding: 0;
+  }
+  .banner-cta {
+    flex-direction: column;
+  }
 }
 @media (min-width: 768px) and (max-width: 991.98px) {
   .menu-item-1,
   .menu-item-2 {
     display: none;
+  }
+  .banner-burp {
+    flex-direction: column;
+  }
+  .banner-img {
+    padding: 0;
+  }
+  .banner-cta {
+    flex-direction: column;
   }
 }
